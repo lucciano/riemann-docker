@@ -7,6 +7,12 @@ services:
       - "5555:5555"
       - "5555:5555/udp"
       - "5556:5556"
+  riemann-health:
+    build: 
+      context: ./riemann-dash
+    entrypoint: riemann-health -h riemann -e docker
+    links:
+      - riemann
   
   riemann-dash:
     build: 

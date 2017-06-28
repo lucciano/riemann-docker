@@ -13,5 +13,4 @@ CMD /riemann-${RIEMANN_VERSION}/bin/riemann  /etc/riemann/riemann.config
 
 EXPOSE 5555 5556
 
-#CMD ["start"]
 #ENTRYPOINT ["/usr/bin/riemann"]
